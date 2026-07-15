@@ -3,10 +3,10 @@
 set -e
 
 APP_NAME="YouDlp"
+REPO_URL="https://raw.githubusercontent.com/ByteChesterX/YouDlp/main"
 INSTALL_DIR="$HOME/.local/share/youdlp"
 BIN_DIR="$HOME/.local/bin"
 DESKTOP_DIR="$HOME/.local/share/applications"
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 echo "=== YouDlp Kurulumu ==="
 echo ""
@@ -82,8 +82,8 @@ installApp() {
     echo "Uygulama kuruluyor..."
 
     mkdir -p "$INSTALL_DIR"
-    cp "$SCRIPT_DIR/main.py" "$INSTALL_DIR/"
-    cp "$SCRIPT_DIR/requirements.txt" "$INSTALL_DIR/"
+    curl -sL "$REPO_URL/main.py" -o "$INSTALL_DIR/main.py"
+    curl -sL "$REPO_URL/requirements.txt" -o "$INSTALL_DIR/requirements.txt"
 
     # Virtual environment oluştur
     python3 -m venv "$INSTALL_DIR/venv"
