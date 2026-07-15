@@ -21,9 +21,8 @@ YouTube videolarını ve ses dosyalarını indirmek için basit bir arayüz uygu
 ## Kurulum
 
 Tek bir komutla kurulum yapabilirsiniz:
-
 bash
-
+curl -sL https://raw.githubusercontent.com/ByteChesterX/YouDlp/main/install.sh | bash
 
 
 Bu komut şunları otomatik olarak yapar:
@@ -31,7 +30,7 @@ Bu komut şunları otomatik olarak yapar:
 1. Python, tkinter ve ffmpeg yoksa yükler
 2. Bir sanal ortam (virtual environment) oluşturur
 3. Gerekli Python paketlerini yükler (yt-dlp, customtkinter)
-4. `~/.local/bin/youdlp` dosyasını oluşturur (çalıştırma scripti)
+4. ~/.local/bin/youdlp` dosyasını oluşturur (çalıştırma scripti)
 5. Masaüstü uygulama kısayolu oluşturur
 
 ### Manuel Kurulum
